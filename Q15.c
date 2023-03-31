@@ -2,23 +2,23 @@
 
 int main() 
 {
-int i,max,N,x;
+int i,n,x;
 
-	printf("Enter N : ");
-	scanf("%d",&N);
+printf("Enter n : ");
+scanf("%d",&n);
 	
-	max=0;
+int max=0;
 	
-	for(i=1;i<=N;i++)
-	{
-		printf("Enter x-%d : ",i);
-		scanf("%d",&x);
+for(i=1;i<=n;i++)
+{
+	printf("Enter x - %d : ",i);
+	scanf("%d",&x);
 
-		if(max < x){
-			max = x;
-		}
+	if(max < x){
+		max = x;
 	}
+}
 	
-	printf("\n max = %d",max);
-	return 0;
+printf("\n max = %d",max);
+
 }

@@ -1,38 +1,26 @@
 #include<stdio.h>
-struct employee
+union employee 
 {
-	int empno;
-	char empname[20];
-	char address[20];
-	int age;
+	int employee_id;
+	char name[20];
+	float salary;
 }
 main()
 {
-	struct employee p;
+	union employee p;
 	
-	int n = 5;
-	int i;
+	printf("Enter the id = ");
+	scanf("%d",&p.employee_id);
+	printf("id = %d",p.employee_id);
 	
-	for(i=1;i<=5;i++){
+	printf("\nEnter the name = ");
+	scanf("%s",&p.name);
+	printf("Name = %s",p.name);
 	
-	printf("\nEnter the details of employee %d",i);
-	
-	printf("\nEnter the empno = ");
-	scanf("%d",&p.empno);
-	printf("empno = %d",p.empno);
-	
-	printf("\nEnter the empname = ");
-	scanf("%s",&p.empname);
-	printf("empname = %s",p.empname);
-	
-	printf("\nEnter the address = ");
-	scanf("%s",&p.address);
-	printf("address = %s",p.address);
-	
-	printf("\nEnter the age = ");
-	scanf("%d",&p.age);
-	printf("age = %d",p.age);
-	
-	
-	}
+	printf("\nEnter the Salary = ");
+	scanf("%f",&p.salary);
+	printf("Salary = %f",p.salary);
+
+//	Difference between the structure and union is the structure has total bytes value is 28, but the unoin has one
+//	one datatype that has max 20 bytes and other datatype has no limit.
 }
